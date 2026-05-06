@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta property="og:title" content="Laura & Jorge">
+<meta property="og:description" content="Estás invitado a nuestra boda">
+<meta property="og:image" content="fotofinal.JPEG">
+<meta property="og:type" content="website">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Laura & Jorge</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400&family=Montserrat&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* 🌸 INTRO */
+.intro {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    animation: fadeOut 3s ease forwards;
+    animation-delay: 5s;
+}
+
+.intro img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.initials {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 90px;
+    color: white;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+/* 🌿 FONDO GENERAL */
+.content {
+    position: relative;
+    background: url("fotodefondo.JPEG") center/cover no-repeat fixed;
+}
+
+.overlay {
+    background: rgba(255,255,255,0.93);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* ✨ TEXTO */
+h1 {
+    font-family: 'Playfair Display', serif;
+    color: #b89b72;
+}
+
+.names {
+    font-size: 32px;
+    color: #8c6b4f;
+}
+
+.text {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+.section {
+    margin-top: 30px;
+}
+
+a {
+    color: #b89b72;
+    text-decoration: none;
+}
+
+.button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: #b89b72;
+    color: white;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+/* 🖼 FOTO FINAL */
+.final-photo {
+    margin-top: 50px;
+}
+
+.final-photo img {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* 🎬 ANIMACIONES */
+@keyframes fadeIn {
+    to {opacity: 1;}
+}
+
+@keyframes fadeOut {
+    to {opacity: 0; visibility: hidden;}
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- 🌸 INTRO (FOTO PRINCIPAL) -->
+<div class="intro">
+    <!-- 📸 FOTO INICIAL -->
+    <img src="fotodefondo.JPEG">
+    <div class="initials">L & J</div>
+</div>
+
+<!-- 💍 CONTENIDO -->
+<div class="content">
+<div class="overlay">
+
+    <h1>40º Aniversario de Bodas</h1>
+    
+
+    <div class="names">Laura & Jorge</div>
+
+    <div class="text">
+        En compañía de nuestras hijas:<br><br>
+        <strong>Laura Victoria Pérez Lara y Georgina Michelle Pérez Lara</strong><br><br>
+
+        Agradecemos su presencia a la ceremonia religiosa el día viernes 17 de julio a las 17:30 horas, en la Parroquia de Nuestra Señora de Guadalupe,<br>
+        Manuel M. Ponce #216, Col. Guadalupe Inn.
+    </div>
+
+    <div class="section">
+        <a href="https://maps.app.goo.gl/dDB8vwkiKaYoGt419?g_st=ic" target="_blank">
+            Ver ubicación ceremonia
+        </a>
+    </div>
+
+    <div class="text section">
+        Después de la ceremonia religiosa agradeceremos su presencia en el salón “Los Pinos” ubicado en Av. Revolución #586, Col. San Pedro de los Pinos.
+    </div>
+
+    <div class="section">
+        <a href="https://maps.app.goo.gl/NNXTmgHFVULHzBLV8?g_st=ic" target="_blank">
+            Ver ubicación recepción
+        </a>
+    </div>
+
+    <!-- 👗 DRESS CODE -->
+    <div class="section">
+        <h3>Código de vestimenta</h3>
+        <p><strong>Elegante</strong></p>
+	<img src="vestimenta.JPEG">
+        <p>
+        Evitar blanco y tonos similares (beige, perla, ivory, nude)
+	Es exclusivo de la novia.<br>
+        Evitar color rubí.
+	Exclusivo de madrinas de la boda <br>
+        Agradecemos asistencia SIN niños.
+        </p>
+    </div>
+
+    <!-- 🔗 CONFIRMACIÓN -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo_T2uCAjdCpL-yDhAIojl2C1A5-_43YB-7ntKQRYee1wLdA/viewform?usp=publish-editor" target="_blank" class="button">
+        Confirmar Asistencia
+    </a>
+
+    <!-- 🖼 FOTO FINAL -->
+    <div class="final-photo">
+        <img src="fotofinal.JPEG">
+    </div>
+
+</div>
+</div>
+
+<!-- 🎵 BOTÓN DE MÚSICA ELEGANTE -->
+<audio id="musica" loop>
+    <source src="Conlosañosquemequedan.mp3" type="audio/mp3">
+</audio>
+
+<button id="btnMusica">🎵</button>
+
+<style>
+#btnMusica {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(184,155,114,0.85);
+    backdrop-filter: blur(6px);
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+/* ✨ efecto hover */
+#btnMusica:hover {
+    transform: scale(1.1);
+    background: rgba(160,135,100,0.9);
+}
+
+/* 🎶 animación cuando está sonando */
+.playing {
+    animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+</style>
+
+<script>
+const btn = document.getElementById("btnMusica");
+const audio = document.getElementById("musica");
+
+let isPlaying = false;
+
+btn.addEventListener("click", () => {
+    if (!isPlaying) {
+        audio.play();
+        btn.classList.add("playing");
+        isPlaying = true;
+    } else {
+        audio.pause();
+        btn.classList.remove("playing");
+        isPlaying = false;
+    }
+});
+</script>
+
+</body>
+</html>
